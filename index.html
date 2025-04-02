@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta property="og:title" content="iDataClinic - Soluções em TI" />
+  <meta property="og:description" content="Consultoria em TI com foco em dados, automação e inovação digital." />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630" />
+  <meta property="og:url" content="https://idataclinic.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta name="description" content="Consultoria em TI especializada em dados, automação, websites e soluções personalizadas.">
+  <meta name="keywords" content="consultoria TI, data clinic, automação, websites, tecnologia, análise de dados">
+  <meta name="author" content="iDataClinic">
+  <link rel="icon" href="https://via.placeholder.com/32" type="image/png">
+
+  <title>iDataClinic - Soluções em TI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-4oVZX5qgXb9ZsnzNvv5oyzQ+68YQylbZ+LgJxZIR4yCrNn0ZzFgMSg+mIRwP6JBS8KQ4h+Rp0K3Y8MvMbwKcWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('[data-service]');
+      const serviceInput = document.getElementById('service');
+      buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          const service = e.target.getAttribute('data-service');
+          serviceInput.value = service;
+        });
+      });
+    });
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; transition: all 0.3s ease; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+    }
+    .cta-button {
+      margin-top: 1.5rem;
+      background: #3b82f6;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .section {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #0f172a;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .service-card h3 {
+      margin-bottom: 0.8rem;
+      color: #1e3a8a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .service-card:nth-child(1) h3::before { content: "\f085"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    .service-card:nth-child(2) h3::before { content: "\f0ad"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    .service-card:nth-child(3) h3::before { content: "\f080"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    .service-card:nth-child(4) h3::before { content: "\f571"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    .service-card:nth-child(5) h3::before { content: "\f0ac"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    .service-card:nth-child(6) h3::before { content: "\f0eb"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    .service-card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .service-card a {
+      display: inline-block;
+      background: #3b82f6;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+    }
+    .contact-form button {
+      margin-top: 1.5rem;
+      background: #3b82f6;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      background: #0f172a;
+      color: #ccc;
+      padding: 2rem;
+      text-align: center;
+    }
+    footer a { color: #60a5fa; text-decoration: none; }
+  
+@media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1rem; }
+  .cta-button { font-size: 0.9rem; padding: 0.6rem 1.2rem; }
+  .section h2 { font-size: 1.5rem; }
+  .service-card h3 { font-size: 1rem; }
+  .service-card p, .about p { font-size: 0.95rem; }
+}
+
+  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+  <nav style="background:#1e3a8a; padding: 1rem; text-align:center;">
+    <a href="index.html" style="color: white; margin: 0 1rem; text-decoration: none;">Início</a>
+    <a href="servicos.html" style="color: white; margin: 0 1rem; text-decoration: none;">Serviços</a>
+    <a href="blog.html" style="color: white; margin: 0 1rem; text-decoration: none;">Blog</a>
+    <a href="index.html#contact" style="color: white; margin: 0 1rem; text-decoration: none;">Contato</a>
+  </nav>
+
+  <header>
+    <img src="assets/img/logo.png" alt="Logo iDataClinic" style="max-width: 220px; margin-bottom: 1rem;">
+    <h1>iDataClinic</h1>
+    <p>Soluções inteligentes em TI, Dados e Consultoria Digital</p>
+    <button class="cta-button">Solicite uma Consulta</button>
+  <img src="https://via.placeholder.com/1200x300?text=Bem-vindo+à+iDataClinic" alt="Banner" style="width: 100%; margin-top: 1rem; border-radius: 1rem;" />
+  </header>
+  <section class="section services">
+    <h2>Serviços</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Gestão Estratégica de TI</h3>
+        <p>Desenvolvimento de planos de tecnologia alinhados aos objetivos do seu negócio, incluindo infraestrutura e inovação.</p>
+        <a href="#contact" data-service="Gestão Estratégica de TI">Solicitar Serviço</a>
+      </div>
+      <div class="service-card">
+        <h3>Automação de Processos Empresariais</h3>
+        <p>Otimização de processos repetitivos com ferramentas modernas que aumentam a eficiência e reduzem custos.</p>
+        <a href="#contact" data-service="Automação de Processos Empresariais">Solicitar Serviço</a>
+      </div>
+      <div class="service-card">
+        <h3>Business Intelligence e Análise de Dados</h3>
+        <p>Transformamos dados em insights com dashboards, relatórios e análises preditivas.</p>
+        <a href="#contact" data-service="Business Intelligence e Análise de Dados">Solicitar Serviço</a>
+      </div>
+      <div class="service-card">
+        <h3>Consultoria Contábil e Financeira</h3>
+        <p>Consultoria especializada para organização financeira, planejamento tributário e decisões baseadas em dados.</p>
+        <a href="#contact" data-service="Consultoria Contábil e Financeira">Solicitar Serviço</a>
+      </div>
+      <div class="service-card">
+        <h3>Websites e Soluções Digitais</h3>
+        <p>Criação de sites modernos, responsivos e personalizados para aumentar sua presença digital.</p>
+        <a href="#contact" data-service="Websites e Soluções Digitais">Solicitar Serviço</a>
+      </div>
+      <div class="service-card">
+        <h3>Soluções Personalizadas de TI</h3>
+        <p>Projetos sob medida para atender às necessidades específicas de sua empresa com tecnologia.</p>
+        <a href="#contact" data-service="Soluções Personalizadas de TI">Solicitar Serviço</a>
+      </div>
+    </div>
+  </section>
+  <section class="section blog">
+    <h2>Blog e Dicas</h2>
+    <div style="text-align: center;">
+      <p>Confira nossas dicas sobre segurança digital, análise de dados e boas práticas em TI.</p>
+      <a href="#" style="display: inline-block; margin-top: 1rem; background: #1e3a8a; color: #fff; padding: 0.6rem 1.2rem; border-radius: 0.5rem; text-decoration: none;">Acessar Blog</a>
+    </div>
+  </section>
+
+  <section class="section about">
+    <h2>Sobre Nós</h2>
+    <p>A iDataClinic é uma empresa de consultoria em TI comprometida com a excelência, transparência e inovação. Nosso objetivo é oferecer soluções personalizadas que resolvam desafios reais em tecnologia da informação, dados e digitalização.</p>
+  </section>
+  <section id="contact" class="section contact">
+    <h2>Contato</h2>
+    <form class="contact-form" action="https://formspree.io/f/xeqyppjy" method="POST" method="POST">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <label for="service">Serviço de Interesse</label>
+      <input type="text" id="service" name="service" />
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 iDataClinic. Todos os direitos reservados. | <a href="#">Política de Privacidade</a></p>
+  <p style="margin-top: 1rem;"><i class="fas fa-lock"></i> Seus dados estão seguros conforme a LGPD.</p>
+  </footer>
+
+  <a href="https://wa.me/351912345678" target="_blank" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 15px; border-radius: 50%; text-align: center; font-size: 24px; z-index: 1000;">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+
+</html>

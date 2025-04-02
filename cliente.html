@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Cliente - iDataClinic</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .cliente-painel {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .cliente-painel h2 {
+      margin-bottom: 1rem;
+      color: #1e3a8a;
+    }
+    .cliente-painel ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .cliente-painel ul li {
+      margin-bottom: 1rem;
+      background: #f1f5f9;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+    .login-wrapper {
+      max-width: 400px;
+      margin: 4rem auto;
+      text-align: center;
+    }
+    .login-wrapper input {
+      padding: 0.7rem;
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+    }
+    .login-wrapper button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      background-color: #1e3a8a;
+      color: #fff;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav style="background:#1e3a8a; padding: 1rem; text-align:center;">
+    <a href="index.html" style="color: white; margin: 0 1rem; text-decoration: none;">Início</a>
+    <a href="servicos.html" style="color: white; margin: 0 1rem; text-decoration: none;">Serviços</a>
+    <a href="blog.html" style="color: white; margin: 0 1rem; text-decoration: none;">Blog</a>
+    <a href="index.html#contact" style="color: white; margin: 0 1rem; text-decoration: none;">Contato</a>
+  </nav>
+
+  <div class="login-wrapper" id="login-area">
+    <h2>Área do Cliente</h2>
+    <p>Digite a senha fornecida para acessar seus dados.</p>
+    <input type="password" id="senha" placeholder="Senha de acesso">
+    <button onclick="verificarSenha()">Entrar</button>
+  </div>
+
+  <div class="cliente-painel" id="painel" style="display:none;">
+    <h2>Bem-vindo, João Silva!</h2>
+    <p>Aqui estão seus documentos e status de serviços:</p>
+    <ul>
+      <li><strong>Contrato de Suporte Técnico:</strong> <a href="#">Download PDF</a></li>
+      <li><strong>Relatório BI - Março:</strong> <a href="#">Ver Dashboard</a></li>
+      <li><strong>Status Website:</strong> Em desenvolvimento (70%)</li>
+      <li><strong>Próxima reunião:</strong> 08/04/2025 às 14:00</li>
+    </ul>
+  </div>
+
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById('senha').value;
+      if (senha === 'cliente2025') {
+        document.getElementById('login-area').style.display = 'none';
+        document.getElementById('painel').style.display = 'block';
+      } else {
+        alert('Senha incorreta!');
+      }
+    }
+  </script>
+</body>
+</html>
